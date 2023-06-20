@@ -3,6 +3,7 @@ package net.k16em.android.tryjetpack
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -22,7 +23,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    Column {
+                        Greeting(name = "Android")
+                        Goodbye(name = "Android")
+                        Greeting(name = "iOS")
+                        Goodbye(name = "iOS")
+                    }
                 }
             }
         }
@@ -41,6 +47,22 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     TryjetpackTheme {
-        Greeting("Android")
+        Greeting(name = "Android")
+    }
+}
+
+@Composable
+fun Goodbye(name: String, modifier: Modifier = Modifier) {
+    Text(
+        text = "Goodbye, $name.",
+        modifier = modifier
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GoodbyePreview() {
+    TryjetpackTheme {
+        Goodbye(name = "Android")
     }
 }
