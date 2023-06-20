@@ -44,3 +44,19 @@ fun GreetingPreview() {
         Greeting(name = "Android")
     }
 }
+
+@Composable
+fun Goodbye(name: String, modifier: Modifier = Modifier) {
+    Text(
+        text = "Goodbye, $name",
+        modifier = modifier
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GoodbyePreview() {
+    TryjetpackTheme {
+        Goodbye(name = "Android")
+    }
+}
