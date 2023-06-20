@@ -26,6 +26,8 @@ class MainActivity : ComponentActivity() {
                     Column {
                         Greeting(name = "Android")
                         Goodbye(name = "Android")
+                        Greeting(name = "iOS")
+                        Goodbye(name = "iOS")
                     }
                 }
             }
