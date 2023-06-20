@@ -54,7 +54,7 @@ fun GreetingPreview() {
 @Composable
 fun Goodbye(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Goodbye, $name",
+        text = "Goodbye, $name.",
         modifier = modifier
     )
 }
